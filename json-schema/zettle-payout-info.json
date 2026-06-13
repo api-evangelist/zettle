@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/zettle/main/json-schema/zettle-payout-info.json",
+  "title": "Zettle Payout Info",
+  "description": "Payout-related information from a merchant's Zettle liquid account.",
+  "type": "object",
+  "properties": {
+    "totalBalance": {
+      "type": "integer",
+      "description": "The account balance in the currency's smallest unit. Can be negative when refunds exceed sales.",
+      "example": 300
+    },
+    "currencyId": {
+      "type": "string",
+      "description": "The ISO 4217 currency code of the account (e.g. GBP).",
+      "example": "GBP"
+    },
+    "nextPayoutAmount": {
+      "type": "integer",
+      "description": "The amount of money to be paid out to the merchant in the currency's smallest unit.",
+      "example": 2000
+    },
+    "discountRemaining": {
+      "type": "integer",
+      "description": "The remaining amount of discounts from merchant vouchers in the currency's smallest unit.",
+      "example": 9800
+    },
+    "periodicity": {
+      "type": "string",
+      "description": "The payout period configured by the merchant.",
+      "enum": ["DAILY", "WEEKLY", "MONTHLY"],
+      "example": "DAILY"
+    }
+  },
+  "required": ["totalBalance", "currencyId"]
+}

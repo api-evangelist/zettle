@@ -45,6 +45,8 @@ apis:
         url: https://developer.zettle.com/docs/api/finance/overview
       - type: APIReference
         url: https://developer.zettle.com/docs/api/finance/api-reference
+      - type: OpenAPI
+        url: openapi/zettle-finance-api-openapi.yaml
 
   - name: Zettle Purchase API
     description: Retrieve purchase transaction history, individual purchase records, and refund data for a merchant account.

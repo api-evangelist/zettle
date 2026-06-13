@@ -1,0 +1,72 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "zettle": "https://developer.zettle.com/vocab#",
+    "Finance": "zettle:Finance",
+    "FinanceAccount": "zettle:FinanceAccount",
+    "Transaction": "zettle:Transaction",
+    "PayoutInfo": "zettle:PayoutInfo",
+    "totalBalance": {
+      "@id": "zettle:totalBalance",
+      "@type": "schema:MonetaryAmount"
+    },
+    "currencyId": {
+      "@id": "schema:currency"
+    },
+    "amount": {
+      "@id": "schema:price"
+    },
+    "timestamp": {
+      "@id": "schema:dateCreated",
+      "@type": "schema:DateTime"
+    },
+    "originatorTransactionType": {
+      "@id": "zettle:transactionType"
+    },
+    "originatorTransactionUuid": {
+      "@id": "schema:identifier"
+    },
+    "accountTypeGroup": {
+      "@id": "zettle:accountTypeGroup"
+    },
+    "nextPayoutAmount": {
+      "@id": "zettle:nextPayoutAmount"
+    },
+    "discountRemaining": {
+      "@id": "zettle:discountRemaining"
+    },
+    "periodicity": {
+      "@id": "zettle:periodicity"
+    },
+    "TransactionType": {
+      "@id": "zettle:TransactionType",
+      "@type": "@vocab",
+      "ADJUSTMENT": "zettle:ADJUSTMENT",
+      "ADVANCE": "zettle:ADVANCE",
+      "ADVANCE_DOWNPAYMENT": "zettle:ADVANCE_DOWNPAYMENT",
+      "ADVANCE_FEE_DOWNPAYMENT": "zettle:ADVANCE_FEE_DOWNPAYMENT",
+      "CASHBACK": "zettle:CASHBACK",
+      "FAILED_PAYOUT": "zettle:FAILED_PAYOUT",
+      "FROZEN_FUNDS": "zettle:FROZEN_FUNDS",
+      "INVOICE_PAYMENT": "zettle:INVOICE_PAYMENT",
+      "INVOICE_PAYMENT_FEE": "zettle:INVOICE_PAYMENT_FEE",
+      "PAYMENT": "zettle:PAYMENT",
+      "PAYMENT_FEE": "zettle:PAYMENT_FEE",
+      "PAYMENT_PAYOUT": "zettle:PAYMENT_PAYOUT",
+      "PAYOUT": "zettle:PAYOUT"
+    },
+    "AccountType": {
+      "@id": "zettle:AccountType",
+      "@type": "@vocab",
+      "PRELIMINARY": "zettle:PRELIMINARY",
+      "LIQUID": "zettle:LIQUID"
+    },
+    "PayoutPeriodicity": {
+      "@id": "zettle:PayoutPeriodicity",
+      "@type": "@vocab",
+      "DAILY": "zettle:DAILY",
+      "WEEKLY": "zettle:WEEKLY",
+      "MONTHLY": "zettle:MONTHLY"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "summary": "Get account balance response",
+  "description": "Example response from GET /accounts/{accountTypeGroup}/balance for a LIQUID account.",
+  "value": {
+    "totalBalance": 14750,
+    "currencyId": "GBP"
+  }
+}

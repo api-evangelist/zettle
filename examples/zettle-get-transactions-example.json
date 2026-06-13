@@ -1,0 +1,24 @@
+{
+  "summary": "Get account transactions response",
+  "description": "Example response from GET /accounts/{accountTypeGroup}/transactions for a LIQUID account.",
+  "value": [
+    {
+      "timestamp": "2022-03-01T12:42:10",
+      "amount": "5000",
+      "originatorTransactionType": "PAYMENT",
+      "originatorTransactionUuid": "5e8673e4-a52f-11ec-b909-0242ac120002"
+    },
+    {
+      "timestamp": "2022-03-01T14:10:00",
+      "amount": "-250",
+      "originatorTransactionType": "PAYMENT_FEE",
+      "originatorTransactionUuid": "7c3d91f2-a52f-11ec-b909-0242ac120002"
+    },
+    {
+      "timestamp": "2022-03-02T09:00:00",
+      "amount": "-4750",
+      "originatorTransactionType": "PAYOUT",
+      "originatorTransactionUuid": "9a1e23b0-a530-11ec-b909-0242ac120002"
+    }
+  ]
+}

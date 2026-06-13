@@ -1,0 +1,11 @@
+{
+  "summary": "Get payout info response",
+  "description": "Example response from GET /payout-info for a merchant with daily payouts.",
+  "value": {
+    "totalBalance": 14750,
+    "currencyId": "GBP",
+    "nextPayoutAmount": 14750,
+    "discountRemaining": 0,
+    "periodicity": "DAILY"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "vocabulary": "Zettle Finance API",
+  "description": "Domain vocabulary for the Zettle Finance API covering accounts, transactions, and payouts.",
+  "terms": [
+    {
+      "term": "accountTypeGroup",
+      "definition": "The type of a merchant's Zettle account. Either PRELIMINARY (unconfirmed transactions) or LIQUID (transactions ready for payout).",
+      "values": ["PRELIMINARY", "LIQUID"]
+    },
+    {
+      "term": "totalBalance",
+      "definition": "The account balance expressed in the currency's smallest unit (e.g. pence for GBP). Can be negative when refunds exceed sales."
+    },
+    {
+      "term": "currencyId",
+      "definition": "ISO 4217 three-letter currency code identifying the currency of an account (e.g. GBP, EUR, SEK)."
+    },
+    {
+      "term": "originatorTransactionType",
+      "definition": "The classification of a financial transaction in a Zettle account.",
+      "values": [
+        "ADJUSTMENT",
+        "ADVANCE",
+        "ADVANCE_DOWNPAYMENT",
+        "ADVANCE_FEE_DOWNPAYMENT",
+        "CASHBACK",
+        "FAILED_PAYOUT",
+        "FROZEN_FUNDS",
+        "INVOICE_PAYMENT",
+        "INVOICE_PAYMENT_FEE",
+        "PAYMENT",
+        "PAYMENT_FEE",
+        "PAYMENT_PAYOUT",
+        "PAYOUT"
+      ]
+    },
+    {
+      "term": "PRELIMINARY",
+      "definition": "Zettle account type where transactions are pending confirmation before moving to the LIQUID account."
+    },
+    {
+      "term": "LIQUID",
+      "definition": "Zettle account type where confirmed transactions reside and are eligible for payout to the merchant's bank account or PayPal Wallet."
+    },
+    {
+      "term": "PAYOUT",
+      "definition": "A transfer of funds from the merchant's LIQUID account to their registered bank account or PayPal Wallet. Negative amounts indicate an outgoing payout; positive amounts indicate a return of funds."
+    },
+    {
+      "term": "PAYMENT",
+      "definition": "A card or alternative payment processed through Zettle where Zettle handles the funds. Refund results in an inverted-amount transaction of the same type."
+    },
+    {
+      "term": "PAYMENT_FEE",
+      "definition": "The processing fee charged by Zettle for a PAYMENT transaction. Positive in the case of a refund."
+    },
+    {
+      "term": "FROZEN_FUNDS",
+      "definition": "Funds withheld from the LIQUID account to cover a chargeback initiated by the card issuer. Reversed with a positive transaction if the chargeback is revoked."
+    },
+    {
+      "term": "ADVANCE",
+      "definition": "A cash advance provided by Zettle to the merchant based on their sales history, credited to the LIQUID account."
+    },
+    {
+      "term": "CASHBACK",
+      "definition": "A retroactive adjustment to reduce a merchant's effective card processing fee rate, credited to the LIQUID account."
+    },
+    {
+      "term": "periodicity",
+      "definition": "The frequency at which payouts are scheduled from the merchant's LIQUID account.",
+      "values": ["DAILY", "WEEKLY", "MONTHLY"]
+    },
+    {
+      "term": "nextPayoutAmount",
+      "definition": "The projected amount to be transferred in the next scheduled payout, in the currency's smallest unit."
+    },
+    {
+      "term": "discountRemaining",
+      "definition": "The remaining value of Zettle-issued marketing vouchers available to offset transaction fees, in the currency's smallest unit."
+    }
+  ]
+}
