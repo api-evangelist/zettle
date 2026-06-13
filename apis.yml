@@ -1,0 +1,148 @@
+aid: zettle
+name: Zettle
+description: Zettle by PayPal is a cloud-based point-of-sale platform (formerly iZettle) that provides REST APIs for managing product inventory, processing card payments, tracking purchases, handling refunds, and accessing merchant financial and account data.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/zettle/refs/heads/main/apis.yml
+created: 2026-06-13
+modified: 2026-06-13
+specificationVersion: "0.19"
+tags:
+  - Point of Sale
+  - POS
+  - Payments
+  - Inventory
+  - Finance
+  - PayPal
+  - Card Payments
+  - Merchant Services
+apis:
+  - name: Zettle OAuth API
+    description: OAuth 2.0 authentication and authorisation for Zettle APIs. Supports authorisation code grant with PKCE for mobile and partner-hosted apps.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.zettle.com/docs/api/oauth/overview
+    baseURL: https://oauth.zettle.com
+    tags:
+      - OAuth
+      - Authentication
+      - Authorization
+    properties:
+      - type: Documentation
+        url: https://developer.zettle.com/docs/api/oauth/overview
+      - type: APIReference
+        url: https://developer.zettle.com/docs/api/oauth/api-reference
+
+  - name: Zettle Finance API
+    description: Access merchant financial data including payouts, account balances, and transaction fee summaries.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.zettle.com/docs/api/finance/overview
+    baseURL: https://finance.izettle.com
+    tags:
+      - Finance
+      - Payouts
+      - Accounting
+    properties:
+      - type: Documentation
+        url: https://developer.zettle.com/docs/api/finance/overview
+      - type: APIReference
+        url: https://developer.zettle.com/docs/api/finance/api-reference
+
+  - name: Zettle Purchase API
+    description: Retrieve purchase transaction history, individual purchase records, and refund data for a merchant account.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.zettle.com/docs/api/purchase/overview
+    baseURL: https://purchase.izettle.com
+    tags:
+      - Purchases
+      - Transactions
+      - Refunds
+      - Sales
+    properties:
+      - type: Documentation
+        url: https://developer.zettle.com/docs/api/purchase/overview
+      - type: APIReference
+        url: https://developer.zettle.com/docs/api/purchase/api-reference-md
+
+  - name: Zettle Product Library API
+    description: Manage the merchant product catalogue including products, variants, prices, and categories.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.zettle.com/docs/api/product-library/overview
+    baseURL: https://products.izettle.com
+    tags:
+      - Products
+      - Catalog
+      - Inventory
+    properties:
+      - type: Documentation
+        url: https://developer.zettle.com/docs/api/product-library/overview
+      - type: APIReference
+        url: https://developer.zettle.com/docs/api/product-library/api-reference
+
+  - name: Zettle Inventory API
+    description: Track stock levels and inventory movements across merchant locations. Default rate limit is 4 requests per second.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.zettle.com/docs/api/inventory/overview
+    baseURL: https://inventory.izettle.com
+    tags:
+      - Inventory
+      - Stock
+      - Locations
+    properties:
+      - type: Documentation
+        url: https://developer.zettle.com/docs/api/inventory/overview
+      - type: APIReference
+        url: https://developer.zettle.com/docs/api/inventory/api-reference
+
+  - name: Zettle Image API
+    description: Upload and manage product images used in the Zettle product library and POS display.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.zettle.com/docs/api/image/overview
+    baseURL: https://image.izettle.com
+    tags:
+      - Images
+      - Media
+    properties:
+      - type: Documentation
+        url: https://developer.zettle.com/docs/api/image/overview
+      - type: APIReference
+        url: https://developer.zettle.com/docs/api/image/api-reference
+
+  - name: Zettle Giftcard API
+    description: Issue, redeem, and manage gift cards for Zettle merchants.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.zettle.com/docs/api/giftcard/overview
+    baseURL: https://giftcard.izettle.com
+    tags:
+      - Gift Cards
+      - Payments
+    properties:
+      - type: Documentation
+        url: https://developer.zettle.com/docs/api/giftcard/overview
+      - type: APIReference
+        url: https://developer.zettle.com/docs/api/giftcard/api-reference
+
+common:
+  - type: Website
+    url: https://www.zettle.com/
+  - type: Documentation
+    url: https://developer.zettle.com/docs/get-started
+  - type: GitHubOrg
+    url: https://github.com/izettle
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/zettle/
+  - type: Blog
+    url: https://www.zettle.com/blog
+  - type: Pricing
+    url: https://www.zettle.com/gb/pricing
+  - type: StatusPage
+    url: https://status.zettle.com/
+  - type: X
+    url: https://x.com/Zettle
+  - type: Plans
+    url: plans/zettle-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/zettle-rate-limits.yml
+  - type: FinOps
+    url: finops/zettle-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

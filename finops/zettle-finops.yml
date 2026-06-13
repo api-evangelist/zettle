@@ -1,0 +1,39 @@
+name: Zettle FinOps
+description: Financial operations guidance for teams integrating with Zettle by PayPal APIs. Covers cost drivers, optimization strategies, and budget considerations.
+url: https://developer.zettle.com/docs/api
+costDrivers:
+  - name: Transaction Fees
+    description: Primary cost for merchants; 2.29% + $0.09 per in-person transaction (US). Keyed-in transactions cost 3.49% + $0.09.
+    type: variable
+    unit: per transaction
+  - name: Card Reader Hardware
+    description: One-time hardware cost of $29 per card reader (US pricing).
+    type: one-time
+    unit: per device
+  - name: API Access
+    description: No charge for API calls. Rate limiting applies but there is no per-call fee.
+    type: free
+  - name: Chargeback Fees
+    description: Disputed transaction handling may incur fees per chargeback case.
+    type: variable
+    unit: per chargeback
+optimizationStrategies:
+  - name: Batch API Calls
+    description: Where possible, batch requests (e.g., bulk product library updates) to stay well within rate limits and reduce retry overhead.
+  - name: Cache OAuth Tokens
+    description: OAuth access tokens are long-lived. Cache them and refresh only on expiry to avoid unnecessary token exchange calls.
+  - name: Webhook-Driven Architecture
+    description: Use Pusher/webhook integration for real-time event delivery instead of polling Purchase or Inventory APIs, reducing total request volume.
+  - name: Market Selection
+    description: Transaction fees vary by market. Evaluate which Zettle markets (UK, SE, DE, FR, etc.) offer the most favourable rates for target geographies.
+  - name: Hardware Consolidation
+    description: Deploy shared Zettle card readers across staff where feasible to reduce per-device hardware costs.
+budgetNotes:
+  - Zettle has no monthly SaaS fee, making it cost-predictable for low-volume merchants.
+  - High-volume integrators should negotiate custom rate agreements via the Zettle partner programme.
+  - API integration costs are primarily developer time; no variable API metering applies.
+references:
+  - url: https://www.zettle.com/gb/pricing
+    description: Official Zettle pricing page
+  - url: https://developer.zettle.com/
+    description: Zettle Developer Portal

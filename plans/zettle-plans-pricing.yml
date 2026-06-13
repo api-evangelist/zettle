@@ -1,0 +1,29 @@
+name: Zettle Plans and Pricing
+description: Zettle by PayPal (PayPal POS) pricing structure for merchants and API integrators. No monthly software fee; revenue model is transaction-based.
+url: https://www.zettle.com/gb/pricing
+plans:
+  - name: Pay As You Go
+    description: No monthly fee. Pay only a per-transaction rate for card-present and keyed-in payments. Card reader purchase required.
+    monthlyFee: 0
+    currency: USD
+    features:
+      - description: In-person card-present transaction rate
+        value: "2.29% + $0.09 per transaction"
+      - description: Keyed-in / card-not-present transaction rate
+        value: "3.49% + $0.09 per transaction"
+      - description: Card reader cost (one-time)
+        value: "$29 USD"
+      - description: No monthly contract
+        value: true
+      - description: Free POS app
+        value: true
+      - description: Free API access
+        value: true
+      - description: Inventory management
+        value: true
+      - description: Sales reports and analytics
+        value: true
+notes:
+  - Zettle APIs are free to use; transaction fees apply to payments processed through the platform.
+  - Available in UK, Sweden, Brazil, Norway, Denmark, Finland, Germany, Mexico, Netherlands, France, Spain, and Italy — fees vary by market.
+  - API integrators (self-hosted or partner-hosted apps) do not pay separate API subscription fees.

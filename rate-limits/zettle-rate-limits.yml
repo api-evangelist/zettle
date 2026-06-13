@@ -1,0 +1,34 @@
+name: Zettle API Rate Limits
+description: Rate limiting policies across Zettle REST APIs. Exceeding limits returns HTTP 429. Contact Zettle support to negotiate higher limits for high-volume integrations.
+url: https://developer.zettle.com/docs/api
+limits:
+  - api: Inventory API
+    description: Stock and inventory tracking across locations
+    defaultLimit: 4 requests per second
+    window: 1 second
+    notes: V3 monitors average rate over a rolling short time window; the limit is soft and rate is measured continuously.
+  - api: Purchase API
+    description: Transaction history and purchase records
+    defaultLimit: Not publicly documented; 429 returned on excess
+    notes: Contact Zettle support for volume-specific thresholds.
+  - api: Product Library API
+    description: Product catalog management (products, variants, prices)
+    defaultLimit: Not publicly documented; 429 returned on excess
+    notes: Contact Zettle support for volume-specific thresholds.
+  - api: Finance API
+    description: Financial data, payouts, and account balance
+    defaultLimit: Not publicly documented; 429 returned on excess
+    notes: Contact Zettle support for volume-specific thresholds.
+  - api: OAuth API
+    description: Token issuance and refresh
+    defaultLimit: Not publicly documented; 429 returned on excess
+    notes: Use token caching to minimise calls; tokens are long-lived.
+  - api: Image API
+    description: Product image upload and management
+    defaultLimit: Not publicly documented; 429 returned on excess
+    notes: Contact Zettle support for volume-specific thresholds.
+errorHandling:
+  statusCode: 429
+  retryAfterHeader: true
+  recommendation: Implement exponential backoff and honour Retry-After headers when a 429 is received.
+contact: https://developer.zettle.com/
