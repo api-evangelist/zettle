@@ -2,13 +2,11 @@
   "repo": "zettle",
   "feeds": [
     {
-      "source": "https://www.linkedin.com/company/zettle/",
-      "feed_url": "https://www.linkedin.com/company/zettle/",
-      "title": "",
+      "source": "https://www.zettle.com/blog",
       "saved": 0,
-      "method": "none"
+      "error": "HTTP 404 Not Found"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T13:23:20Z"
 }
