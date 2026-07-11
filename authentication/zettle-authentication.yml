@@ -1,0 +1,19 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/zettle-finance-api-openapi.yaml
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - authorizationCode
+schemes:
+- name: ZettleOauth
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://oauth.zettle.com/authorize
+    tokenUrl: https://oauth.zettle.com/token
+    scopes: 1
+  description: For more information, see the [OAuth API documentation](https://developer.zettle.com/docs/api/oauth/overview).
+  sources:
+  - openapi/zettle-finance-api-openapi.yaml
