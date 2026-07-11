@@ -123,6 +123,10 @@ apis:
         url: https://developer.zettle.com/docs/api/giftcard/api-reference
 
 common:
+  - type: Authentication
+    url: authentication/zettle-authentication.yml
+  - type: OAuthScopes
+    url: scopes/zettle-scopes.yml
   - type: Website
     url: https://www.zettle.com/
   - type: Documentation

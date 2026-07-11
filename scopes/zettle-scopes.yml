@@ -1,0 +1,18 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/zettle-finance-api-openapi.yaml
+schemes:
+- name: ZettleOauth
+  source: openapi/zettle-finance-api-openapi.yaml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://oauth.zettle.com/authorize
+    tokenUrl: https://oauth.zettle.com/token
+  description: For more information, see the [OAuth API documentation](https://developer.zettle.com/docs/api/oauth/overview).
+scopes:
+- scope: READ:FINANCE
+  description: Access to read finance data
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/zettle-finance-api-openapi.yaml
