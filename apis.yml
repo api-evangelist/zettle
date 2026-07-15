@@ -123,6 +123,8 @@ apis:
         url: https://developer.zettle.com/docs/api/giftcard/api-reference
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/zettle-agentic-access.yml
   - type: DomainSecurity
     url: security/zettle-domain-security.yml
   - type: Authentication
