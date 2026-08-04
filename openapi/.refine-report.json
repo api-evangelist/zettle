@@ -1,0 +1,16 @@
+{
+  "provider": "zettle",
+  "sources": [
+    "zettle-accounts-api-openapi.yml",
+    "zettle-payout-api-openapi.yml"
+  ],
+  "outputs": [
+    "zettle-accounts-api-openapi.yml",
+    "zettle-payout-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
