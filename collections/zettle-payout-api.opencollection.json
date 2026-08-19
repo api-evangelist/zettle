@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Finance accounts payout API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "payout",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get payout info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://finance.izettle.com/v2/payout-info",
+            "params": [
+              {
+                "name": "at",
+                "value": "",
+                "type": "query",
+                "description": "Used to fetch payouts at a certain point in time. The time is specified in UTC.\n"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "authorization_code",
+              "authorizationUrl": "https://oauth.zettle.com/authorize",
+              "accessTokenUrl": "https://oauth.zettle.com/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Returns payout related information from a merchant's liquid account.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

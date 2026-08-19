@@ -1,0 +1,274 @@
+{
+  "item": [
+    {
+      "id": "d34ab24c-1da4-4af7-bc80-228e5b3c9153",
+      "name": "payout",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "deec1c6d-effa-461b-8c6f-ad015a6f953f",
+          "name": "Get payout info",
+          "request": {
+            "name": "Get payout info",
+            "description": {
+              "content": "Returns payout related information from a merchant's liquid account.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "payout-info"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "at",
+                  "value": "NOW()",
+                  "description": "Used to fetch payouts at a certain point in time. The time is specified in UTC.\n"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "READ:FINANCE"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://oauth.zettle.com/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://oauth.zettle.com/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "35aeaec7-5957-421c-a582-fddf7153c072",
+              "name": "Returns when the operation is successful.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "payout-info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "at",
+                      "value": "2022-03-01T12:42:10"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"totalBalance\": 300,\n  \"currencyId\": \"GBP\",\n  \"nextPayoutAmount\": 2000,\n  \"discountRemaining\": 9800,\n  \"periodicity\": \"DAILY\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9e071fe0-fa0f-49ba-b6e7-258646e6e57a",
+              "name": "Returns when a required parameter is missing or in a wrong format in the request.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "payout-info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "at",
+                      "value": "2022-03-01T12:42:10"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8ce19bc0-e593-4478-abd0-6db2c8d36d96",
+              "name": "Returns when one of the following occurs:\n  - The authentication information is missing in the request.\n  - The authentication token has expired.\n  - The authentication token is invalid.\n",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "payout-info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "at",
+                      "value": "2022-03-01T12:42:10"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3bba8978-b1a3-430c-bdfe-1dd532475e75",
+              "name": "Returns when the scope being used in the request is incorrect.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "payout-info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "at",
+                      "value": "2022-03-01T12:42:10"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://finance.izettle.com/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2e0c6879-2a95-4b10-8150-5aaac9c612fb",
+    "name": "Finance accounts payout API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Finance API is used to fetch finance-related information that is processed through Zettle. The information includes account balance, all the transactions processed through Zettle, and payout.\n",
+      "type": "text/plain"
+    }
+  }
+}
