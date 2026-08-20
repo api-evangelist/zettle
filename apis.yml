@@ -20,6 +20,14 @@ created: 2026-06-13
 modified: 2026-06-13
 specificationVersion: '0.23'
 tags:
+  - Point-of-Sale
+  - Payments
+  - Inventory
+  - Finance
+  - PayPal
+  - Card Payments
+  - Merchant Services
+tags_raw:
   - Point of Sale
   - POS
   - Payments
@@ -37,6 +45,9 @@ apis:
   humanURL: https://developer.zettle.com/docs/api/oauth/overview
   baseURL: https://oauth.zettle.com
   tags:
+  - Authentication
+  - Authorization
+  tags_raw:
   - OAuth
   - Authentication
   - Authorization
@@ -54,6 +65,11 @@ apis:
   baseURL: https://purchase.izettle.com
   tags:
   - Purchases
+  - Transaction
+  - Refunds
+  - Sales
+  tags_raw:
+  - Purchases
   - Transactions
   - Refunds
   - Sales
@@ -69,6 +85,10 @@ apis:
   humanURL: https://developer.zettle.com/docs/api/product-library/overview
   baseURL: https://products.izettle.com
   tags:
+  - Product
+  - Catalog
+  - Inventory
+  tags_raw:
   - Products
   - Catalog
   - Inventory
@@ -99,6 +119,9 @@ apis:
   humanURL: https://developer.zettle.com/docs/api/image/overview
   baseURL: https://image.izettle.com
   tags:
+  - Image
+  - Media
+  tags_raw:
   - Images
   - Media
   properties:
@@ -125,6 +148,8 @@ apis:
   humanURL: https://developer.zettle.com/docs/api/oauth/overview
   baseURL: https://oauth.zettle.com
   tags:
+  - Account
+  tags_raw:
   - accounts
   properties:
   - type: OpenAPI
@@ -139,6 +164,8 @@ apis:
   humanURL: https://developer.zettle.com/docs/api/oauth/overview
   baseURL: https://oauth.zettle.com
   tags:
+  - Payout
+  tags_raw:
   - payout
   properties:
   - type: OpenAPI
