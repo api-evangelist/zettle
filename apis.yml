@@ -33,7 +33,6 @@ modified: 2026-06-13
 specificationVersion: '0.23'
 tags:
   - Point-of-Sale
-  - POS
   - Payments
   - Inventory
   - Finance
@@ -177,7 +176,7 @@ apis:
   humanURL: https://developer.zettle.com/docs/api/oauth/overview
   baseURL: https://oauth.zettle.com
   tags:
-  - payout
+  - Payout
   tags_raw:
   - payout
   properties:
