@@ -24,6 +24,7 @@ accessModel:
   source:
   - plans
   - authentication
+  - {url: 'https://www.zettle.com/', status: 301, note: 'declared website redirects to https://www.paypal.com/us/business/pos-system — a different registrable domain (zettle.com -> paypal.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zettle.png
