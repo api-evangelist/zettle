@@ -119,6 +119,10 @@ apis:
   baseURL: https://inventory.izettle.com
   tags:
   - Inventory
+  - Stocks
+  - Location
+  tags_raw:
+  - Inventory
   - Stock
   - Locations
   properties:
