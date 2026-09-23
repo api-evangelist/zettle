@@ -1,20 +1,18 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Finance accounts API
-  description: 'The Finance API is used to fetch finance-related information that is processed through Zettle. The information includes account balance, all the transactions processed through Zettle, and payout.
-
-    '
+  title: Finance Accounts API
+  description: The Finance API is used to fetch finance-related information that is processed through Zettle. The information includes account balance, all the transactions processed through Zettle, and payout.
   version: '2.0'
 servers:
 - url: https://finance.izettle.com/v2
   description: Production
 tags:
-- name: accounts
+- name: Accounts
 paths:
   /accounts/{accountTypeGroup}/balance:
     get:
       tags:
-      - accounts
+      - Accounts
       operationId: getBalance
       summary: Get account balance
       description: Returns the balance in a merchant's preliminary or liquid account at a specific time.
@@ -63,12 +61,10 @@ paths:
   /accounts/{accountTypeGroup}/transactions:
     get:
       tags:
-      - accounts
+      - Accounts
       operationId: getAccountTransactions
       summary: Get account transactions
-      description: 'Returns all transactions or transactions of certain types from a merchant''s preliminary or liquid account during a specific period.
-
-        '
+      description: Returns all transactions or transactions of certain types from a merchant's preliminary or liquid account during a specific period.
       parameters:
       - $ref: '#/components/parameters/accountTypeGroupParam'
       - name: start
