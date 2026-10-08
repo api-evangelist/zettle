@@ -31,3 +31,15 @@ notes:
   - Zettle APIs are free to use; transaction fees apply to payments processed through the platform.
   - Available in UK, Sweden, Brazil, Norway, Denmark, Finland, Germany, Mexico, Netherlands, France, Spain, and Italy — fees vary by market.
   - API integrators (self-hosted or partner-hosted apps) do not pay separate API subscription fees.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Pay As You Go
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
