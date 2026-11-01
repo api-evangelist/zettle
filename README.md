@@ -64,10 +64,160 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Zettle by PayPal is a cloud-based point-of-sale platform (formerly iZettle) providing REST APIs for managing product inventory, processing card payments, tracking purchases, handling refunds, and accessing merchant financial and account data.
+Zettle by PayPal is a cloud-based point-of-sale platform (formerly iZettle) that provides REST APIs for managing product inventory, processing card payments, tracking purchases, handling refunds, and accessing merchant financial and account data.
 
-- **Developer Portal:** https://developer.zettle.com/
-- **API Overview:** https://developer.zettle.com/docs/api
-- **GitHub:** https://github.com/izettle
-- **Status Page:** https://status.zettle.com/
-- **Pricing:** https://www.zettle.com/gb/pricing
+**Areas:** Point-of-Sale · Payments · Inventory · Finance · PayPal · Card Payments · Merchant Services
+
+## Zettle on APIs.io
+
+Everything profiled for Zettle is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/zettle/](https://apis.io/providers/zettle/)** — or go straight to one of the APIs or properties below.
+
+### APIs (8)
+
+- [Zettle OAuth API](https://apis.io/apis/zettle/zettle-oauth-api/) — OAuth 2.0 authentication and authorisation for Zettle APIs. Supports authorisation code grant with PKCE for mobile and partner-hosted apps.
+- [Zettle Purchase API](https://apis.io/apis/zettle/zettle-purchase-api/) — Retrieve purchase transaction history, individual purchase records, and refund data for a merchant account.
+- [Zettle Product Library API](https://apis.io/apis/zettle/zettle-product-library-api/) — Manage the merchant product catalogue including products, variants, prices, and categories.
+- [Zettle Inventory API](https://apis.io/apis/zettle/zettle-inventory-api/) — Track stock levels and inventory movements across merchant locations. Default rate limit is 4 requests per second.
+- [Zettle Image API](https://apis.io/apis/zettle/zettle-image-api/) — Upload and manage product images used in the Zettle product library and POS display.
+- [Zettle Giftcard API](https://apis.io/apis/zettle/zettle-giftcard-api/) — Issue, redeem, and manage gift cards for Zettle merchants.
+- [Zettle Accounts API](https://apis.io/apis/zettle/zettle-accounts-api/) — The accounts API from Zettle — 2 operation(s) for accounts.
+- [Zettle Payout API](https://apis.io/apis/zettle/zettle-payout-api/) — The payout API from Zettle — 1 operation(s) for payout.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Zettle Agentic Access](https://apis.io/agentic-access/zettle/zettle-agentic-access/)
+
+#### JSON Schema (3)
+
+The data models the API reads and writes.
+
+- [Zettle Account Balance](https://apis.io/schemas/zettle/zettle-account-balance/)
+- [Zettle Payout Info](https://apis.io/schemas/zettle/zettle-payout-info/)
+- [Zettle Transaction](https://apis.io/schemas/zettle/zettle-transaction/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Zettle Context](https://apis.io/jsonld/zettle/zettle-context/)
+
+#### Examples (3)
+
+Example requests and responses.
+
+- [Zettle Get Account Balance Example](https://apis.io/examples/zettle/zettle-get-account-balance-example/)
+- [Zettle Get Payout Info Example](https://apis.io/examples/zettle/zettle-get-payout-info-example/)
+- [Zettle Get Transactions Example](https://apis.io/examples/zettle/zettle-get-transactions-example/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [Finance accounts API](https://apis.io/collections/zettle/open-zettle-accounts-api/)
+- [Finance accounts payout API](https://apis.io/collections/zettle/open-zettle-payout-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Zettle — jsonschema rules](https://apis.io/rules/zettle/zettle-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Zettle Authentication](https://apis.io/security/zettle/zettle-authentication/)
+- [Zettle Domain Security](https://apis.io/security/zettle/zettle-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Zettle Scopes](https://apis.io/scopes/zettle/zettle-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Zettle Plans Pricing](https://apis.io/plans/zettle/zettle-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Zettle Rate Limits](https://apis.io/rate-limits/zettle/zettle-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Zettle Finops](https://apis.io/finops/zettle/zettle-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.zettle.com/)
+- [Documentation](https://developer.zettle.com/docs/get-started)
+- [Pricing](https://www.zettle.com/gb/pricing)
+- [Blog](https://www.zettle.com/blog)
+- [Status](https://status.zettle.com/)
+
+## API Evangelist rating
+
+**Kin Score 35.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 55.6 |
+| Contract governance | 9.8 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 15.8 |
+
+**Agent readiness 32.4** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.1** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/zettle/](https://apis.io/providers/zettle/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Zettle: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/zettle/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
